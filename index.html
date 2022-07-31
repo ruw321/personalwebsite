@@ -20,13 +20,13 @@
 
   <!-- Libraries Stylesheet -->
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <!-- <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet"> -->
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
+<body data-spy="scroll" data-target=".navbar" data-offset="51" onpagehide="return myFunction()">
   <!-- Navbar Start -->
   <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
     <a href="index.html" class="navbar-brand ml-lg-3">
@@ -45,7 +45,7 @@
         <!-- <a href="#service" class="nav-item nav-link">Service</a> -->
         <!-- <a href="#testimonial" class="nav-item nav-link">Review</a> -->
         <!-- <a href="#blog" class="nav-item nav-link">Blog</a> -->
-        <!-- <a href="#contact" class="nav-item nav-link">Contact</a> -->
+        <a href="#contact" class="nav-item nav-link">Contact</a>
       </div>
       <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
     </div>
@@ -252,7 +252,8 @@
                 </div>
                 <div class="modal-body">
                   <p> This project uses the weather data to demonstrate the increase
-                    in temperatures with vivid demonstrations, as well as using machine learning algorithms to predict the
+                    in temperatures with vivid demonstrations, as well as using machine learning algorithms to predict
+                    the
                     future temperature increase based of the historical data.</p>
                   <a href="https://colab.research.google.com/drive/19XeSd6mttpqLLt6mKqJ8W82fWKhB86SB?usp=sharing"
                     target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Learn more at Colab</a>
@@ -535,7 +536,7 @@
   <!-- Skill End -->
 
   <!-- Contact Start -->
-  <!-- <div class="container-fluid py-5" id="contact">
+  <div class="container-fluid py-5" id="contact">
     <div class="container">
       <div class="position-relative d-flex align-items-center justify-content-center">
         <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
@@ -545,31 +546,31 @@
         <div class="col-lg-8">
           <div class="contact-form text-center">
             <div id="success"></div>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form name="sentMessage" id="contactForm" action="https://formspree.io/f/mlevrjjn" method="POST">
               <div class="form-row">
                 <div class="control-group col-sm-6">
                   <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required"
-                    data-validation-required-message="Please enter your name" />
+                    name="Sender Name" data-validation-required-message="Please enter your name" />
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="control-group col-sm-6">
                   <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required"
-                    data-validation-required-message="Please enter your email" />
+                    name="Email" data-validation-required-message="Please enter your email" />
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required"
-                  data-validation-required-message="Please enter a subject" />
+                  name="Subject" data-validation-required-message="Please enter a subject" />
                 <p class="help-block text-danger"></p>
               </div>
               <div class="control-group">
                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message" required="required"
-                  data-validation-required-message="Please enter your message"></textarea>
+                  name="Message" data-validation-required-message="Please enter your message"></textarea>
                 <p class="help-block text-danger"></p>
               </div>
               <div>
-                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                <button class="btn btn-outline-primary" type="submit">Send
                   Message</button>
               </div>
             </form>
@@ -577,7 +578,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- Contact End -->
 
 
@@ -585,10 +586,13 @@
   <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
     <div class="container text-center py-5">
       <div class="d-flex justify-content-center mb-4">
-        <a class="btn btn-light btn-social mr-2" href="https://github.com/ruw321" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://github.com/ruw321" target="_blank"
+          rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         <!-- <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-handshake-f"></i></a> -->
-        <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/wang321/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-        <a class="btn btn-light btn-social" href="https://www.instagram.com/wang_ruifan/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/wang321/" target="_blank"
+          rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-light btn-social" href="https://www.instagram.com/wang_ruifan/" target="_blank"
+          rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
       </div>
       <div class="d-flex justify-content-center mb-3">
         <a class="text-white" href="#">Privacy</a>
@@ -621,14 +625,21 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- <script src="lib/lightbox/js/lightbox.min.js"></script> -->
 
   <!-- Contact Javascript File -->
-  <script src="mail/jqBootstrapValidation.min.js"></script>
-  <script src="mail/contact.js"></script>
+  <!-- <script src="mail/jqBootstrapValidation.min.js"></script> -->
+  <!-- <script src="mail/contact.js"></script> -->
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  <script>
+      function myFunction() {
+        for (const form of document.getElementsByTagName('form')) {
+          form.reset();
+        }
+      }
+    </script>
 </body>
 
 </html>
