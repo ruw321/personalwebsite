@@ -52,28 +52,6 @@
   </nav>
   <!-- Navbar End -->
 
-
-  <!-- Video Modal Start -->
-
-  <!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>         -->
-  <!-- 16:9 aspect ratio -->
-  <!-- <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-  <!-- Video Modal End -->
-
-
   <!-- Header Start -->
   <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
     <div class="container">
@@ -296,6 +274,7 @@
           <ul class="list-inline mb-4" id="portfolio-flters">
             <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
             <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Web Development</li>
+            <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fifth">Distributed Systems</li>
             <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Interactive Computer Graphics</li>
             <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Machine Learning</li>
             <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fourth">IOS Development</li>
@@ -335,9 +314,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item fifth">
           <div class="position-relative overflow-hidden mb-2">
-            <img class="img-fluid rounded w-100" src="img/citeams.png" alt="">
+            <img class="img-fluid rounded w-100" src="img/distributed_systems.png" alt="">
             <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
               <button class="modal-button">
                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
@@ -348,18 +327,18 @@
               <!-- Modal content -->
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4>CITeams</h4>
+                  <h4>PennCloud</h4>
                   <span class="close">&times;</span>
                 </div>
                 <div class="modal-body">
-                  <p>CITeams is a convenient Slack App that helps MCIT students find course project team members and
-                    study mates.</p>
-                  <a href="https://github.com/Hackathon-CITeam/CITeams" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-outline-primary">Learn more at Github</a>
+                  <p>PennCloud is a small cloud platform including features such as webmail service and key-value
+                    storage service which is similar to Googleʼs Bigtable. We simulated distributed systems environment with a load balancer for multiple instances of frontend servers
+                    as well as multiple backend servers with a master backend node. We also achieved fault tolerance and consistency with primary-based replication, having checkpoints and loggings in disk</p>
+                  <!-- <a href="#contact" class="btn btn-outline-primary">Code Available Upon Request</a> -->
+                  <a id="closemodal" href="#contact" class="btn btn-outline-primary close" data-dismiss="modal">Code Available Upon Request</a>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
